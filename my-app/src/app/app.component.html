@@ -1,0 +1,31 @@
+<!-- LANDING PAGE -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <br>
+  <a class="navbar-brand" href="#"><strong>{{title|uppercase}}</strong></a>
+  <div class="col text-right">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-danger" id='dropdownBasic1' ngbDropdownToggle>
+        Selecionar Competição:
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item" routerLink="../futebol/pl">Liga NOS</button>
+        <button class="dropdown-item" routerLink="../futebol/cl">Champions League</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<hr />
+<br>
+<br>
+
+<router-outlet></router-outlet>
+
+<div class="row">
+  <div class="col-md-12" style="background-color:black">
+    <p class="text-center">
+      <span style="color:
+          floralwhite"> {{title}}: Tudo sobre a Liga dos Campeões e a Liga NOS</span>
+    </p>
+  </div>
+</div>

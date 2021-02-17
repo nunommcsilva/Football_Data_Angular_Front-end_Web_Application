@@ -1,0 +1,46 @@
+<h1>{{equipa.name}}</h1>
+<img src={{equipa.crestUrl}}   onerror="this.src='../../assets/images/bola.jpg'" 
+height="250"  />
+<h2>Ficha Técnica</h2>
+<ul>
+  <li>Nome abreviado: {{equipa.shortName}}</li>
+  <li>Morada: {{equipa.address}}</li>
+  <li>Telefone: {{equipa.phone}}</li>
+  <li>Email: {{equipa.email}}</li>
+  <li>Ano de funcação: {{equipa.founded}}</li>
+  <li>Cores: {{equipa.clubColors}}</li>
+  <li>Estádio: {{equipa.venue}}</li>
+</ul>
+
+<h2>Competições Atuais</h2>
+<ul *ngFor='let each of equipa.activeCompetitions'>
+  <li>{{each.name}}</li>
+</ul>
+
+<h2>Plantel</h2>
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <th>Nome</th>
+    <th>Posição</th>
+    <th>Nascimento</th>
+    <th>Nacionalidade</th>
+    <th>Camisa</th>
+    <th>Posição</th>
+  </thead>
+  <tbody class="text-white bg-dark">
+    <tr *ngFor="let each of equipa.squad"
+     [class.featured]='each.featured'
+      (mouseover)="each.featured=true"
+      (mouseleave)='each.featured=false'>
+      <td>{{each.name}}</td>
+      <td>{{each.position}}</td>
+      <td>{{each.dateOfBirth|date:'dd/MM/yyyy'}}</td>
+      <td>{{each.nationality}}</td>
+      <td>{{each.shirtNumber}}</td>
+      <td>{{each.role}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>

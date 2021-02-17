@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "super tires",
+        "description": "blablabla",
+        "inStock": 5,
+        "price": 500,
+        "image": "assets/images/tire.jpg",
+        "featured": true,
+        "quantity": 0
+    },
+    {
+        "id": 2,
+        "name": "super wheels",
+        "description": "bleble",
+        "inStock": 50,
+        "price": 600,
+        "image": "assets/images/seats.jpg",
+        "featured": true,
+        "quantity": 0
+    },
+    {
+        "id": 3,
+        "name": "super whatever",
+        "description": "blublu",
+        "price": 1000,
+        "inStock": 0,
+        "image": "assets/images/shocks.jpg",
+        "featured": false,
+        "quantity": 0
+    }
+]

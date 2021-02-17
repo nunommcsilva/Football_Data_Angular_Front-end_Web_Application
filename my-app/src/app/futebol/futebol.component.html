@@ -1,0 +1,22 @@
+<div>
+  <h2>{{futebol.competition.name}}</h2>
+</div>
+
+<table class="table table-bordered table-striped ">
+  <thead class="thead-dark">
+    <th>Símbolo</th>
+    <th>Nome</th>
+    <th>Telefone</th>
+    <th>Morada</th>
+  </thead>
+  <tbody class="text-white bg-dark">
+    <tr *ngFor="let each of futebol.teams" [class.featured]='each.featured' (mouseover)="each.featured=true"
+      (mouseleave)='each.featured=false'>
+      <td width='10%'>
+        <img src={{each.crestUrl}} onerror="this.src='../../assets/images/bola.jpg'" width="40%" /></td>
+      <td><button routerLink='/equipa/{{each.id}}'>{{each.name}}</button></td>
+      <td>{{each.phone}}</td>
+      <td>{{each.address}}</td>
+    </tr>
+  </tbody>
+</table>
